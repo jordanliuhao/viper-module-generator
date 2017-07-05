@@ -1,12 +1,11 @@
 //
 // Created by AUTHOR
-// Copyright (c) YEAR AUTHOR. All rights reserved.
+// Copyright (c) YEAR COMPANY. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class VIPERView: UIViewController, VIPERViewProtocol
-{
+class VIPERView: UIViewController, VIPERViewProtocol {
     var presenter: VIPERPresenterProtocol?
 }

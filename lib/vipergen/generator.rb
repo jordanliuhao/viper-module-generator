@@ -2,11 +2,11 @@ module Vipergen
 	# Cosntants
 	class Generator
 		# Constants
-		LANGUAGES = ["swift", "objc"]
-		REPLACEMENT_KEY = "VIPER"
-		AUTHOR_REPLACEMENT_KEY = "AUTHOR"
-		YEAR_REPLACEMENT_KEY = "YEAR"
-	        COMPANY_REPLACEMENT_KEY = "COMPANY"
+        LANGUAGES = ["swift", "objc"]
+        REPLACEMENT_KEY = "VIPER"
+        AUTHOR_REPLACEMENT_KEY = "AUTHOR"
+        YEAR_REPLACEMENT_KEY = "YEAR"
+        COMPANY_REPLACEMENT_KEY = "COMPANY"
 
 		# Main method that generate the VIPER files structure
 		def self.generate_viper(template, language, name, path, author, company)
