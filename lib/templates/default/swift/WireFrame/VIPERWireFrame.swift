@@ -7,13 +7,15 @@ import Foundation
 
 class VIPERWireframe: VIPERWireframeProtocol {
     class func presentVIPERModule(fromView view: UIViewController) {
-        let VIPERView = VIPERWireframe.configureViewController()
+        guard let newView = VIPERWireframe.configureViewController() else {
+            return
+        }
         /**
          * Add code to present your View here
-        **/
+         **/
     }
 
-    class func configureViewController() -> UIViewController {
+    class func configureViewController() -> UIViewController? {
         // Generating module components
         let view: VIPERViewProtocol = VIPERView()
         let presenter: VIPERPresenterProtocol & VIPERInteractorOutputProtocol = VIPERPresenter()
@@ -31,6 +33,6 @@ class VIPERWireframe: VIPERWireframeProtocol {
         interactor.APIDataManager = APIDataManager
         interactor.localDatamanager = localDataManager
 
-        return view as! UIViewController
+        return view as? UIViewController
     }
 }
