@@ -13,9 +13,10 @@ protocol VIPERViewProtocol: class {
     */
 }
 
-protocol VIPERWireframeProtocol: class {
-    static weak var view: UIViewController? { get set }
-    static func presentVIPERModule(fromView view: UIViewController)
+protocol VIPERWireFrameProtocol: class {
+	var view: UIViewController? { get set }
+	
+    static func setupModule() -> UIViewController?
     /**
     * Add here your methods for communication PRESENTER -> WIREFRAME
     */
@@ -23,35 +24,28 @@ protocol VIPERWireframeProtocol: class {
 
 protocol VIPERPresenterProtocol: class {
     var view: VIPERViewProtocol? { get set }
-    var interactor: VIPERInteractorInputProtocol? { get set }
-    var wireFrame: VIPERWireframeProtocol? { get set }
+    var interactor: VIPERInteractorProtocol? { get set }
+    var wireFrame: VIPERWireFrameProtocol? { get set }
     /**
     * Add here your methods for communication VIEW -> PRESENTER
     */
 }
 
-protocol VIPERInteractorOutputProtocol: class {
-    /**
-    * Add here your methods for communication INTERACTOR -> PRESENTER
-    */
-}
-
-protocol VIPERInteractorInputProtocol: class {
-    var presenter: VIPERInteractorOutputProtocol? { get set }
-    var apiDataManager: VIPERAPIDataManagerInputProtocol? { get set }
-    var localDatamanager: VIPERLocalDataManagerInputProtocol? { get set }
+protocol VIPERInteractorProtocol: class {
+    var apiDataManager: VIPERAPIDataManagerProtocol? { get set }
+    var localDatamanager: VIPERLocalDataManagerProtocol? { get set }
     /**
     * Add here your methods for communication PRESENTER -> INTERACTOR
     */
 }
 
-protocol VIPERAPIDataManagerInputProtocol: class {
+protocol VIPERAPIDataManagerProtocol: class {
     /**
     * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
     */
 }
 
-protocol VIPERLocalDataManagerInputProtocol: class {
+protocol VIPERLocalDataManagerProtocol: class {
     /**
     * Add here your methods for communication INTERACTOR -> LOCALDATAMANAGER
     */

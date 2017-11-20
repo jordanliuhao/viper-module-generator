@@ -5,10 +5,10 @@
 
 import Foundation
 
-class VIPERPresenter: VIPERPresenterProtocol, VIPERInteractorOutputProtocol {
+class VIPERPresenter: VIPERPresenterProtocol {
     weak var view: VIPERViewProtocol?
-    var interactor: VIPERInteractorInputProtocol?
-    var wireFrame: VIPERWireframeProtocol?
+    var interactor: VIPERInteractorProtocol?
+    var wireFrame: VIPERWireFrameProtocol?
     
     init() {}
 }

@@ -5,6 +5,6 @@
 
 import Foundation
 
-class VIPERLocalDataManager: VIPERLocalDataManagerInputProtocol {
+class VIPERLocalDataManager: VIPERLocalDataManagerProtocol {
     init() {}
 }
