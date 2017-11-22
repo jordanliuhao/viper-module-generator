@@ -11,4 +11,7 @@ class VIPERPresenter: VIPERPresenterProtocol {
     var wireFrame: VIPERWireFrameProtocol?
     
     init() {}
+    
+    func onInitRequested() {
+    }
 }

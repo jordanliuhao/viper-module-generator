@@ -7,7 +7,7 @@ import Foundation
 
 class VIPERInteractor: VIPERInteractorProtocol {
     var apiDataManager: VIPERAPIDataManagerProtocol?
-    var localDatamanager: VIPERLocalDataManagerProtocol?
+    var localDataManager: VIPERLocalDataManagerProtocol?
     
     init() {}
 }
