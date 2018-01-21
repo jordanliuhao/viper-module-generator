@@ -5,6 +5,13 @@
 
 import Foundation
 
+/**
+ @dip.register
+ @dip.name presenter
+ @dip.scope Shared
+ @dip.factory app
+ @dip.implements VIPERPresenterProtocol
+ */
 class VIPERPresenter: VIPERPresenterProtocol {
     weak var view: VIPERViewProtocol?
     var interactor: VIPERInteractorProtocol!

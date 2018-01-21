@@ -8,7 +8,7 @@ import Foundation
 /**
  @dip.register
  @dip.name api
- @dip.scope Unique
+ @dip.scope Shared
  @dip.factory app
  @dip.implements VIPERAPIDataManagerProtocol
  */

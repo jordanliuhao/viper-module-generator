@@ -9,7 +9,7 @@ import UIKit
 /**
  @dip.register
  @dip.name view
- @dip.scope Unique
+ @dip.scope Shared
  @dip.factory app
  @dip.implements VIPERViewProtocol
  */
