@@ -5,6 +5,13 @@
 
 import Foundation
 
+/**
+ @dip.register
+ @dip.name local
+ @dip.scope Unique
+ @dip.factory app
+ @dip.implements VIPERLocalDataManagerProtocol
+ */
 class VIPERLocalDataManager: VIPERLocalDataManagerProtocol {
     init() {}
 }

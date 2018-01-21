@@ -6,6 +6,13 @@
 import Foundation
 import UIKit
 
+/**
+ @dip.register
+ @dip.name view
+ @dip.scope Unique
+ @dip.factory app
+ @dip.implements VIPERViewProtocol
+ */
 class VIPERView: UIViewController, VIPERViewProtocol {
     var presenter: VIPERPresenterProtocol!
     
