@@ -9,7 +9,7 @@ import Foundation
  @dip.register
  @dip.name api
  @dip.scope Shared
- @dip.factory app
+ @dip.factory VIPER
  @dip.implements VIPERAPIDataManagerProtocol
  */
 class VIPERAPIDataManager: VIPERAPIDataManagerProtocol {

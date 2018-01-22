@@ -9,7 +9,7 @@ import Foundation
  @dip.register
  @dip.name local
  @dip.scope Shared
- @dip.factory app
+ @dip.factory VIPER
  @dip.implements VIPERLocalDataManagerProtocol
  */
 class VIPERLocalDataManager: VIPERLocalDataManagerProtocol {

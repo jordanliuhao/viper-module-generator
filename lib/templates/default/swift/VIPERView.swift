@@ -10,7 +10,7 @@ import UIKit
  @dip.register
  @dip.name view
  @dip.scope Shared
- @dip.factory app
+ @dip.factory VIPER
  @dip.implements VIPERViewProtocol
  */
 class VIPERView: UIViewController, VIPERViewProtocol {

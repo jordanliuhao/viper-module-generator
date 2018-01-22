@@ -9,7 +9,7 @@ import Foundation
  @dip.register
  @dip.name presenter
  @dip.scope Shared
- @dip.factory app
+ @dip.factory VIPER
  @dip.implements VIPERPresenterProtocol
  */
 class VIPERPresenter: VIPERPresenterProtocol {
