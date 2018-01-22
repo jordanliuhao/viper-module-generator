@@ -15,6 +15,8 @@ import UIKit
  */
 class VIPERWireFrame: VIPERWireFrameProtocol {
     weak var view: UIViewController?
+    
+    init() {}
 
     class func setupModule() -> VIPERView {
         let storyboard = UIStoryboard(name: "VIPERView", bundle: nil)
