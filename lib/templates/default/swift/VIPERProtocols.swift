@@ -11,8 +11,6 @@ protocol VIPERViewProtocol: class {
 }
 
 protocol VIPERWireFrameProtocol: class {
-    static func setupModule() -> VIPERView
-
 }
 
 protocol VIPERPresenterProtocol: class {
