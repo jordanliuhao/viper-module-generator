@@ -32,11 +32,11 @@ protocol VIPERLocalDataManagerProtocol: class {
 func setupVIPER() -> VIPERView {
     let storyboard = UIStoryboard(name: "VIPERView", bundle: nil)
     let view = storyboard.instantiateInitialViewController() as! VIPERView
-    let presenter = try! appContainer.resolve(VIPERPresenterProtocol.self) as! VIPERPresenter
-    let interactor = try! appContainer.resolve(VIPERInteractorProtocol.self) as! VIPERInteractor
-    let apiDataManager = try! appContainer.resolve(VIPERAPIDataManagerProtocol.self) as! VIPERAPIDataManager
-    let localDataManager = try! appContainer.resolve(VIPERLocalDataManagerProtocol.self) as! VIPERLocalDataManager
-    let wireFrame = try! appContainer.resolve(VIPERWireFrameProtocol.self) as! VIPERWireFrame
+    let presenter = try! viperContainer.resolve(VIPERPresenterProtocol.self) as! VIPERPresenter
+    let interactor = try! viperContainer.resolve(VIPERInteractorProtocol.self) as! VIPERInteractor
+    let apiDataManager = try! viperContainer.resolve(VIPERAPIDataManagerProtocol.self) as! VIPERAPIDataManager
+    let localDataManager = try! viperContainer.resolve(VIPERLocalDataManagerProtocol.self) as! VIPERLocalDataManager
+    let wireFrame = try! viperContainer.resolve(VIPERWireFrameProtocol.self) as! VIPERWireFrame
 
     // Connecting
     view.presenter = presenter

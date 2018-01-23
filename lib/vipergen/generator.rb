@@ -3,6 +3,7 @@ module Vipergen
 	class Generator
 		# Constants
         LANGUAGES = ["swift", "objc"]
+        LOWER_REPLACEMENT_KEY = "viper"
         REPLACEMENT_KEY = "VIPER"
         AUTHOR_REPLACEMENT_KEY = "AUTHOR"
         YEAR_REPLACEMENT_KEY = "YEAR"
@@ -52,6 +53,7 @@ module Vipergen
 			file.close
 
 			# Replacing content
+			content = content.gsub((Vipergen::Generator::LOWER_REPLACEMENT_KEY), name.downcase)
 			content = content.gsub((Vipergen::Generator::REPLACEMENT_KEY), name)
 			content = content.gsub((Vipergen::Generator::AUTHOR_REPLACEMENT_KEY), author)
 			content = content.gsub((Vipergen::Generator::YEAR_REPLACEMENT_KEY), "#{Time.new.year}")
