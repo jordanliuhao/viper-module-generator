@@ -6,8 +6,12 @@
 import Foundation
 import UIKit
 
-protocol VIPERViewProtocol: class {
+struct VIPERViewModel {
 
+}
+
+protocol VIPERViewProtocol: class {
+	func bind(viewModel: VIPERViewModel)
 }
 
 protocol VIPERWireFrameProtocol: class {
@@ -32,11 +36,11 @@ protocol VIPERLocalDataManagerProtocol: class {
 func setupVIPER() -> VIPERView {
     let storyboard = UIStoryboard(name: "VIPERView", bundle: nil)
     let view = storyboard.instantiateInitialViewController() as! VIPERView
-    let presenter = try! viperContainer.resolve(VIPERPresenterProtocol.self) as! VIPERPresenter
-    let interactor = try! viperContainer.resolve(VIPERInteractorProtocol.self) as! VIPERInteractor
-    let apiDataManager = try! viperContainer.resolve(VIPERAPIDataManagerProtocol.self) as! VIPERAPIDataManager
-    let localDataManager = try! viperContainer.resolve(VIPERLocalDataManagerProtocol.self) as! VIPERLocalDataManager
-    let wireFrame = try! viperContainer.resolve(VIPERWireFrameProtocol.self) as! VIPERWireFrame
+    let presenter = AppFactory().viperPresenter()
+    let interactor = AppFactory().viperInteractor()
+    let apiDataManager = AppFactory().viperApi()
+    let localDataManager = AppFactory().viperLocal()
+    let wireFrame = AppFactory().viperWireFrame()
 
     // Connecting
     view.presenter = presenter

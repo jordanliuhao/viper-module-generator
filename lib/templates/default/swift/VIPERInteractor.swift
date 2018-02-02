@@ -7,9 +7,9 @@ import Foundation
 
 /**
  @dip.register
- @dip.name interactor
+ @dip.name viperInteractor
  @dip.scope Shared
- @dip.factory VIPER
+ @dip.factory App
  @dip.implements VIPERInteractorProtocol
  */
 class VIPERInteractor: VIPERInteractorProtocol {

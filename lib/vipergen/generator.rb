@@ -53,7 +53,7 @@ module Vipergen
 			file.close
 
 			# Replacing content
-			content = content.gsub((Vipergen::Generator::LOWER_REPLACEMENT_KEY), name.downcase)
+			content = content.gsub((Vipergen::Generator::LOWER_REPLACEMENT_KEY), name[0].downcase + name[1..-1])
 			content = content.gsub((Vipergen::Generator::REPLACEMENT_KEY), name)
 			content = content.gsub((Vipergen::Generator::AUTHOR_REPLACEMENT_KEY), author)
 			content = content.gsub((Vipergen::Generator::YEAR_REPLACEMENT_KEY), "#{Time.new.year}")

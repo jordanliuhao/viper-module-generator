@@ -8,15 +8,18 @@ import UIKit
 
 /**
  @dip.register
- @dip.name view
+ @dip.name viperView
  @dip.scope Shared
- @dip.factory VIPER
+ @dip.factory App
  @dip.implements VIPERViewProtocol
  */
 class VIPERView: UIViewController, VIPERViewProtocol {
     var presenter: VIPERPresenterProtocol!
+        
+    override func viewDidLoad() {
+        presenter.onInitRequested()
+    }
     
-    override func viewWillAppear(_ animated: Bool) {
-        presenter?.onInitRequested()
+    func bind(viewModel: VIPERViewModel) {
     }
 }

@@ -8,13 +8,13 @@ import UIKit
 
 /**
  @dip.register
- @dip.name wireFrame
+ @dip.name viperWireFrame
  @dip.scope Shared
- @dip.factory VIPER
+ @dip.factory App
  @dip.implements VIPERWireFrameProtocol
  */
 class VIPERWireFrame: VIPERWireFrameProtocol {
-    weak var view: UIViewController?
+    weak var view: UIViewController!
     
     init() {}
 }
